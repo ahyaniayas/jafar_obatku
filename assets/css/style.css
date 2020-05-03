@@ -1,0 +1,69 @@
+html {
+  scroll-behavior: smooth;
+}
+.navbar{
+	background: rgba(192, 255, 192, 0.6);
+	font-weight: bold;
+}
+.navbar .text{
+	color: #ffffff;
+}
+/* CONTENT */
+.content{
+	padding: 30px 0;
+}
+.content .judul{
+	margin-top: 60px;	
+	font-size: 20pt;
+	font-weight: bold;
+}
+.content .garis-judul{
+	width: 210px;
+	padding-bottom: 20px;
+	margin: 0;
+	border-top: 3px solid #32a852;
+}
+
+.kotak-follow-us{
+	text-align: center;
+	line-height: 75px;
+	margin: 10px;
+	width: 75px;
+	height: 75px;
+	float: left;
+}
+.kotak-follow-us a{
+	font-weight: bold;
+	text-decoration: none;
+}
+.kotak-follow-us a img{
+	width: 50px;
+}
+.kotak-follow-us1{
+	background: #5ec1d1;
+}
+.kotak-follow-us2{
+	background: #8e44ad;
+}
+.kotak-follow-us3{
+	background: #2ecc71;
+}
+.kotak-follow-us4{
+	background: #3498db;
+}
+/* END CONTENT */
+
+/* ABOUT */
+.about{
+	background: #949494;
+	width: 100%;
+	padding: 30px 0;
+}
+.about .copyright{
+	width: 100%;
+	padding: 30px 0;
+	text-align: center;
+	background: #949494;
+	color: #ffffff;
+}
+/* END ABOUT */

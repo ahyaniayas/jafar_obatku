@@ -1,0 +1,390 @@
+html {
+  scroll-behavior: smooth;
+}
+.navbar{
+	background: rgba(192, 255, 192, 0.6);
+	font-weight: bold;
+}
+.navbar .text{
+	color: #ffffff;
+}
+/* HOME */
+.home{
+	padding: 30px 0;
+}
+.home .garis-text1{
+	width: 210px;
+	padding-bottom: 20px;
+	margin: 0;
+	border-top: 3px solid #32a852;
+}
+.home .text1{
+	margin-top: 60px;	
+	font-size: 20pt;
+	font-weight: bold;
+}
+.home1 .isi{
+	width: 600px;
+	height: 100%;
+	padding-top: 300px;
+	margin: 0 auto;
+	text-align: center;
+}
+.home1 .isi .text1{
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 24pt;
+	text-shadow: 2px -2px 15px blue;
+}
+.home1 .isi .text2{
+	color: #ffffff;
+	font-size: 16pt;
+	text-shadow: 2px -2px 15px red;
+}
+.home1 .isi .text3{
+	position: absolute;
+	bottom: 0;
+	width: 600px;
+	color: #ffffff;
+}
+/* END HOME */
+/* Interaksi */
+.interaksi .tengah .text1{
+	text-align: center;
+	margin-top: 80px;
+	margin-left: 400px;	
+	font-size: 20pt;
+	font-weight: bold;
+}
+.interaksi .tengah .text2{
+	margin-top: 40px;
+	margin-left: 100px;
+	font-size: 16pt;
+	font-weight: bold;
+	padding-left: 15px;
+}
+.interaksi .tengah .garis-text1{
+	width: 320px;
+	padding-bottom: 20px;
+	margin: 0;
+	margin-left: 395px;
+	border-top: 3px solid #32a852;
+}
+.interaksi .tengah .text3{
+	margin-top: 40px;
+	margin-left: 335px;
+	font-size: 16pt;
+	font-weight: bold;
+	padding-left: 15px;
+}
+/* END Interaksi */
+/* Kamus */
+.kamus{
+	padding: 30px 0;
+}
+.kamus .kiri .garis-text1{
+	width: 210px;
+	padding-bottom: 20px;
+	margin: 0;
+	border-top: 3px solid #32a852;
+}
+.kamus .kiri .text1{
+	margin-top: 60px;	
+	font-size: 20pt;
+	font-weight: bold;
+}
+.kamus .kiri .text4{	
+	font-size: 16pt;
+	font-weight: bold;
+	margin-left: 25px;
+}
+.kamus .kiri .text5{	
+	font-size: 14pt;
+	margin-left: 100px;
+	border:0;
+	background-color: #696969;
+	color: #fff;
+	padding: 5px;
+	background-size: 100%;
+}
+.kamus .tengah .garis-text2{
+	width: 510px;
+	padding-bottom: 20px;
+	margin: 0;
+	margin-left: 280px;
+	border-top: 3px solid #32a852;
+}
+.kamus .tengah .text2{
+	text-align: center;
+	margin-top: 60px;
+	margin-left: 280px;	
+	font-size: 20pt;
+	font-weight: bold;
+	color:#ffffff;
+	text-shadow:0px 0px 10px red,-1px 1px 0 red,1px -1px 0 red,1px 1px 0 red;
+}
+.kamus .tengah .text3{
+	margin-top: 40px;
+	font-size: 16pt;
+	color: #345beb;
+	font-weight: bold;
+	padding-left: 15px;
+}
+.tablekamus {
+    font-family: sans-serif;
+    color: #444;
+    border-collapse: collapse;
+    width: 50%;
+    border: 1px solid #f2f5f7;
+}
+ 
+.tablekamus tr th{
+    background: #35A9DB;
+    color: #fff;
+    font-weight: normal;
+}
+ 
+.tablekamus, th, td {
+    padding: 8px 20px;
+    text-align: center;
+}
+ 
+.tablekamus tr:hover {
+    background-color: #f5f5f5;
+}
+ 
+.tablekamus tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+/* END Kamus */
+
+/* PUSTAKA */
+.pustaka{
+	padding: 30px 0;
+}
+.pustaka .kiri .garis-text1{
+	width: 210px;
+	padding-bottom: 20px;
+	margin: 0;
+	border-top: 3px solid #32a852;
+}
+.pustaka .kiri .text1{
+	margin-top: 60px;	
+	font-size: 20pt;
+	font-weight: bold;
+}
+.pustaka .kiri .text2{
+	margin-top: 40px;
+	font-size: 16pt;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.pustaka .kiri .text3{
+	padding-bottom: 60px;
+	font-size: 14pt;
+	font-weight: bold;
+}
+.pustaka .kiri .text4{
+	padding-bottom: 850px;
+	font-size: 14pt;
+	font-weight: bold;
+}
+.pustaka .kiri .text5{
+	padding-bottom: 120px;
+	font-size: 14pt;
+	font-weight: bold;
+}
+.pustaka .kiri .text6{
+	padding-bottom: 85px;
+	font-size: 14pt;
+	font-weight: bold;
+}
+.pustaka .kiri .text7{
+	padding-bottom: 200px;
+	font-size: 14pt;
+	font-weight: bold;
+}
+.pustaka .kiri .text8{
+	padding-bottom: 85px;
+	font-size: 14pt;
+	font-weight: bold;
+}
+.pustaka .kiri .text9{
+	padding-bottom: 15px;
+	font-size: 14pt;
+	font-weight: bold;
+}
+.pustaka .kiri .text10{
+	margin-top: 40px;
+	font-size: 16pt;
+	font-weight: bold;
+	padding-left: 15px;
+}
+.pustaka .kiri .pustaka-point{
+	margin-top: 20px;
+	font-size: 14pt;
+	color: #808080;
+}
+
+.pustaka .kanan{
+	padding-top: 335px;
+}
+.pustaka .kanan .pustaka-point{
+	margin-top: 20px;
+	font-size: 14pt;
+	color: #808080;
+}
+.pustaka .kanan .text1{
+	font-size: 16pt;
+	font-weight: bold;
+	margin-top: 60px;
+	text-decoration: underline;
+}
+.pustaka .kanan .text2{
+	padding-bottom: 5px;
+	font-size: 14pt;
+}
+.pustaka .kanan .text3{
+	padding-bottom: 5px;
+	font-size: 14pt;
+}
+.pustaka .kanan .text4{
+	padding-bottom: 5px;
+	font-size: 14pt;
+}
+.pustaka .kanan .text5{
+	padding-bottom: 5px;
+	font-size: 14pt;
+}
+.pustaka .kanan .text6{
+	padding-bottom: 5px;
+	font-size: 14pt;
+}
+.pustaka .kanan .text7{
+	padding-bottom: 5px;
+	font-size: 14pt;
+}
+.pustaka .kanan .text8{
+	padding-bottom: 5px;
+	font-size: 14pt;
+}
+.pustaka .kanan .form{
+	margin-top: 10px;
+}
+.pustaka .kanan .pesan{
+	height: 125px;
+}
+/* END PUSTAKA */
+
+/* ABOUT */
+.about{
+	background: #949494;
+	width: 100%;
+	padding: 30px 0;
+}
+.about .text1{
+	font-size: 16pt;
+	font-weight: bold;
+	color: #ffffff;
+}
+.about .text2{
+	color: #ffffff;
+	font-size: 12pt;
+}
+.about .text2 li a{
+	color: #ffffff;
+	font-size: 12pt;
+	text-decoration: none;
+}
+.about .kanan .kotak-follow-us{
+	text-align: center;
+	line-height: 75px;
+	margin: 10px;
+	width: 75px;
+	height: 75px;
+	float: left;
+}
+.about .kanan .kotak-follow-us a{
+	font-weight: bold;
+	text-decoration: none;
+}
+.about .kanan .kotak-follow-us a img{
+	width: 50px;
+}
+.about .kanan .kotak-follow-us1{
+	background: #5ec1d1;
+}
+.about .kanan .kotak-follow-us2{
+	background: #8e44ad;
+}
+.about .kanan .kotak-follow-us3{
+	background: #2ecc71;
+}
+.about .kanan .kotak-follow-us4{
+	background: #3498db;
+}
+.about .copyright{
+	width: 100%;
+	padding: 30px 0;
+	text-align: center;
+	background: #949494;
+	color: #ffffff;
+}
+.about .copyright a{
+	text-decoration: none;
+	color: #ffffff;
+}
+/* END ABOUT */
+.about1{
+	width: 100%;
+	padding: 30px 0;
+}
+.about1 .text1{
+	font-size: 16pt;
+	font-weight: bold;
+}
+.about1 .text2{
+	font-size: 12pt;
+}
+.about1 .text2 li a{
+	font-size: 12pt;
+	text-decoration: none;
+}
+.about1 .kanan .kotak-follow-us{
+	text-align: center;
+	line-height: 75px;
+	margin: 10px;
+	width: 75px;
+	height: 75px;
+	float: left;
+}
+.about1 .kanan .kotak-follow-us a{
+	font-weight: bold;
+	text-decoration: none;
+}
+.about1 .kanan .kotak-follow-us a img{
+	width: 50px;
+}
+.about1 .kanan .kotak-follow-us1{
+	background: #5ec1d1;
+}
+.about1 .kanan .kotak-follow-us2{
+	background: #8e44ad;
+}
+.about1 .kanan .kotak-follow-us3{
+	background: #2ecc71;
+}
+.about1 .kanan .kotak-follow-us4{
+	background: #3498db;
+}
+.about1 .copyright{
+	width: 100%;
+	padding: 30px 0;
+	text-align: center;
+	background: #949494;
+	color: #ffffff;
+}
+.about1 .copyright a{
+	text-decoration: none;
+	color: #ffffff;
+}
