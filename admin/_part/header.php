@@ -3,10 +3,10 @@
 <head>
 	<title>Sistem Pakar Interaksi Antar Obat</title>
   <!-- CSS -->
-  <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./assets/plugins/bootstrap/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="./assets/plugins/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/plugins/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/plugins/bootstrap/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../../assets/plugins/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
   <!-- CSS -->
 </head>
 <body>
@@ -20,19 +20,19 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto my-2 my-lg-0">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="./">Halaman Utama</a>
+            <a class="nav-link js-scroll-trigger" href="../../">Halaman Utama</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="./interaksi.php">Interaksi Antar Obat</a>
+            <a class="nav-link js-scroll-trigger" href="../../interaksi.php">Interaksi Antar Obat</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="./kamus.php">Kamus Obat</a>
+            <a class="nav-link js-scroll-trigger" href="../../kamus.php">Kamus Obat</a>
           </li>          
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="./pustaka.php">Tinjauan Pustaka</a>
+            <a class="nav-link js-scroll-trigger" href="../../pustaka.php">Tinjauan Pustaka</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="./tentang.php">Tentang Kami</a>
+            <a class="nav-link js-scroll-trigger" href="../../tentang.php">Tentang Kami</a>
           </li>
         </ul>
       </div>

@@ -1,7 +1,12 @@
 <?php include_once "_part/header.php" ?>
 
 	<?php
-		include './_part/koneksi.php';
+		  include('./admin/obat/proses.php');
+  $lib = new Library();
+  if(isset($_GET['kode_obat'])){
+    $kode_obat = $_GET['kode_obat']; 
+    $data_obat = $lib->get_by_id($kode_obat);
+  }
 	?>
   <div class="container">
     <div class="content">
@@ -11,38 +16,57 @@
       <!-- ====================== BAGIAN ISI ATAS ====================== -->
 
       <!-- ====================== BAGIAN ISI BAWAH ====================== -->
-    	<table id="example" class="table table-striped">
-        <thead>
-        	<tr>
-        		<th>No</th>
-        		<th>Nama</th>
-        		<th>Indikasi</th>
-        		<th>Dosis</th>
-        		<th>Pemberian</th>
-            <th></th>
-        	</tr>
-        </thead>
-        <tbody>
-      	<?php 
-        $sql = "SELECT * FROM obat";
-        $row = $koneksi->prepare($sql);
-        $row->execute();
-        $hasil = $row->fetchAll(PDO::FETCH_OBJ);
-      	$no = 0;
-      	foreach($hasil as $isi){
-          $no++;
-      	?>
-        	<tr>
-        		<td><?php echo $no; ?></td>
-        		<td><?php echo $isi->nama_obat; ?></td>
-        		<td><?php echo $isi->indikasi; ?></td>
-        		<td><?php echo $isi->dosis; ?></td>
-        		<td><?php echo $isi->pemberian; ?></td>
-        		<td><a href="detil.php?kode_obat=<?php echo $isi->kode_obat; ?>">Lihat Detil Obat</a></td>
-        	</tr>
-      	<?php } ?>
-        </tbody>
-    	</table>
+    	<div class="form-group">
+        <div class="detil">
+        <label class="text1" for="nama_obat">Nama Obat :</label><br/>
+        <label class="text2" type="text" class="" id="nama_obat" name="nama_obat">"<?php echo $data_obat['nama_obat']; ?>"</label>
+      </div>
+      <div class="form-group">
+        <div class="detil">
+        <label class="text1" for="gol_obat">Golongan Obat :</label><br/>
+        <label class="text2" type="text" class="" id="gol_obat" name="gol_obat">"<?php echo $data_obat['gol_obat']; ?>"</label>
+      </div>
+      <div class="form-group">
+        <div class="detil">
+        <label class="text1" for="indikasi">Indikasi :</label><br/>
+        <label class="text2" type="text" id="indikasi" name="indikasi">"<?php echo $data_obat['indikasi']; ?>"</label>
+      </div>        
+      <div class="form-group">
+        <div class="detil">
+        <label class="text1" for="dosis">Dosis :</label><br/>
+        <label class="text2" type="text" id="dosis" name="dosis">"<?php echo $data_obat['dosis']; ?>"</label>
+      </div>
+      <div class="form-group">
+        <div class="detil">
+        <label class="text1" for="pemberian">Pemberian :</label><br/>
+        <label class="text2" type="text" id="pemberian" name="pemberian">"<?php echo $data_obat['pemberian']; ?>"</label>
+      </div>
+      <div class="form-group">
+        <div class="detil">
+        <label class="text1" for="kontraindikasi">Kontraindikasi :</label><br/>
+        <label class="text2" type="text" id="kontraindikasi" name="kontraindikasi">"<?php echo $data_obat['kontraindikasi']; ?>"</label>
+      </div>
+      <div class="form-group">
+        <div class="detil">
+        <label class="text1" for="efeksamping">Efek Samping :</label><br/>
+        <label class="text2" type="text" id="efeksamping" name="efeksamping">"<?php echo $data_obat['efeksamping']; ?>"</label>
+      </div>  
+      <div class="form-group">
+        <div class="detil">
+        <label class="text1" for="hamilbusui">Kategori Hamil dan Menyusui :</label><br/>
+        <label class="text2" type="text" id="hamilbusui" name="hamilbusui">"<?php echo $data_obat['hamilbusui']; ?>"</label>
+      </div>
+      <div class="form-group">
+        <div class="detil">
+        <label class="text1" for="interaksi_obat">Interaksi Obat :</label><br/>
+        <label class="text2" type="text" id="interaksi_obat" name="interaksi_obat">"<?php echo $data_obat['interaksi_obat']; ?>"</label>
+      </div>        
+      <div class="form-group">
+        <div class="detil">
+        <label class="text1" for="mekanisme_obat">Mekanisme Obat :</label><br/>
+        <label class="text2" type="text" id="mekanisme_obat" name="mekanisme_obat">"<?php echo $data_obat['mekanisme_obat']; ?>"</label>
+        </div>
+      </div>
       <!-- ====================== BAGIAN ISI BAWAH ====================== -->
     </div>
   </div>

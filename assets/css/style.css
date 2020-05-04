@@ -8,6 +8,40 @@ html {
 .navbar .text{
 	color: #ffffff;
 }
+
+/* HOME */
+.bg{
+	background-image: url("http://localhost/obatku/assets/img/bg3.jpg");
+    opacity: 0.9;
+    /*width: 100%;
+    height: 700px;
+    position: relative;*/
+    margin-left: -80px;
+    margin-right: -80px;
+    margin-bottom: -25px;
+    padding: 10px;
+}
+.bg .center{
+	padding: 10px;
+	margin-left: 200px;
+	margin-right: 200px;
+}
+.bg .center .text1{
+	font-size: 20px;
+	color: #345beb;
+	font-weight: bold;
+	padding: 5px;
+}
+.bg .judul{
+	text-align: center;
+	margin-top: 60px;	
+	font-size: 20pt;
+	font-weight: bold;
+	color:#ffffff;
+	text-shadow:0px 0px 10px red,-1px 1px 0 red,1px -1px 0 red,1px 1px 0 red;
+}
+/* END HOME */
+
 /* CONTENT */
 .content{
 	padding: 30px 0;
@@ -53,6 +87,20 @@ html {
 }
 /* END CONTENT */
 
+/* DETIL */
+.detil .text1{
+	font-size: 24px;
+	font-weight: bold;
+	color: #696969;
+}
+.detil .text2{
+	font-size: 14pt;
+	margin-left: 60px;
+	padding: 5px;
+	background-size: 100%;
+}
+/* END DETIL */
+
 /* ABOUT */
 .about{
 	background: #949494;
@@ -67,3 +115,41 @@ html {
 	color: #ffffff;
 }
 /* END ABOUT */
+
+/* Admin Home */
+.card .home .text1{
+	margin-top: 70px;
+	padding: 20px;
+	text-align: center;
+	font-weight: bolder;
+}
+/* End Admin Home */
+
+/* Admin Tambah */
+.tambah .text1{
+	margin-top: 70px;
+	padding: 20px;
+	text-align: center;
+	font-weight: bolder;
+}
+.tambah .text2{
+	padding: 5px;
+	font-size: 18px;
+}
+.tambah .text3{
+	font-size: 20px;
+	color: #345beb;
+	font-weight: bold;
+	padding: 20px;
+	font-size: 24px;
+	margin-left: 50px;
+}
+.tambah .tabel{
+	margin-left: 30px;
+	margin-right: 30px;
+}
+.tambah .tabel .btn{
+	padding: 15px;
+	margin-left: 540px;
+}
+/* End Admin Tambah */
