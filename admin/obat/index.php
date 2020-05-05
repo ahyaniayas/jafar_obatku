@@ -1,15 +1,4 @@
 <?php include_once "../_part/header.php" ?>
-<link rel="stylesheet" href="../../assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../assets/plugins/bootstrap/css/dataTables.bootstrap4.min.css">
-    <script src="../../assets/plugins/jquery/jquery.min.js"></script>
-    <script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../../assets/plugins/jquery/jquery.dataTables.min.js"></script>
-    <script src="../../assets/plugins/bootstrap/js/dataTables.bootstrap4.min.js"></script>
-    <script>
-        $(document).ready(function() {
-          $('#example').DataTable();
-        } );
-    </script>
 <?php 
 include('proses.php');
 $lib = new Library();
@@ -38,7 +27,8 @@ if(isset($_GET['hapus_obat']))
             <div class="card-body">
                 <a href="tambah.php" class="btn btn-success">Tambah Obat</a>
                 <hr/>
-                <table class="table table-striped" width="60%">
+                <table id="tabel-kamus" class="table table-striped" width="60%">
+                    <thead>
                     <tr>    
                         <th>No</th>
                         <th>Nama Obat</th>
@@ -51,8 +41,10 @@ if(isset($_GET['hapus_obat']))
                         <th>Kategori Hamil dan Menyusui</th>
                         <th>Interaksi Obat</th>
                         <th>Mekanisme Obat</th>
+                        <th></th>
                     </tr>
-                    <?php 
+                    </thead>
+                    <tbody><?php 
                     $no = 1;
                     foreach($data_obat as $row)
                     {
@@ -74,6 +66,7 @@ if(isset($_GET['hapus_obat']))
                         $no++;
                     }
                     ?>
+                </tbody>
                 </table>
             </div>
         </div>

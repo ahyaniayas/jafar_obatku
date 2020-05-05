@@ -14,9 +14,10 @@
     	<table id="example" class="table table-striped">
         <thead>
         	<tr>
-        		<th>No</th>
-        		<th>Nama</th>
-        		<th>Indikasi</th>
+            <!-- perhatikan -->
+        		<th>No</th>  <!-- ini kolom ke 0 -->
+        		<th>Nama</th> <!-- ini kolom ke 1 -->
+        		<th>Indikasi</th> <!-- dan seterusnya -->
         		<th>Dosis</th>
         		<th>Pemberian</th>
             <th></th>

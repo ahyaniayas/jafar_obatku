@@ -40,7 +40,7 @@ if(isset($_POST['tambah'])){
 	</head>
 <body>
 	<div class="tambah">
-	<center><h2 class="text1">Obatku</h2></center>
+	<center><h2 class="text1">Data Obat</h2></center>
 	<!-- caranya gini -->
 	<!-- "./" ini untuk menggunakan folder saat ini berarti ini posisinya di -->
 	<!-- localhost/jafar_obatku/admin/obat/ -->

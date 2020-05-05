@@ -3,19 +3,12 @@
 if(!empty($_POST["tambah"])){
 	include_once("../../_part/koneksi.php"); 
 // include yang berarti memasukan koneksi.php yang sudah di buat tadi yang berfungsi mengatur host, username, dan juga database yang sudah di buat tadi
-		$kode_obat = isset($_POST[';kode_obat']) ? $_POST['kode_obat'] : "";
-		$nama_obat = $_POST['nama_obat'];
-		$gol_obat = $_POST['gol_obat'];
-		$indikasi = $_POST['indikasi'];
-		$dosis = $_POST['dosis'];
-		$pemberian = $_POST['pemberian'];
-		$kontraindikasi = $_POST['kontraindikasi'];
-		$efeksamping = $_POST['efeksamping'];
-		$hamilbusui = $_POST['hamilbusui'];
-		$interaksi_obat = $_POST['interaksi_obat'];
-		$mekanisme_obat = $_POST['mekanisme_obat'];
+		$kode_interaksi = isset($_POST[';kode_interaksi']) ? $_POST['kode_interaksi'] : "";
+		$nama_interaksi = $_POST['nama_interaksi'];
+		$interaksi = $_POST['interaksi'];
+		$kode_obat = $_POST['kode_obat'];
 // dan di atas adalah variabel yang nanti nya akan di pake untuk di bawah ini untuk memasukan ke database pada saat kita klik submit
-$simpan = ("INSERT INTO obat (kode_obat, nama_obat, gol_obat, indikasi, dosis, pemberian, kontraindikasi, efeksamping, hamilbusui, interaksi_obat, mekanisme_obat) VALUES ('$kode_obat','$nama_obat','$gol_obat','$indikasi','$dosis','$pemberian','$kontraindikasi','$efeksamping','$hamilbusui','$interaksi_obat','$mekanisme_obat')");
+$simpan = ("INSERT INTO interaksi (kode_interaksi, nama_interaksi, interaksi, kode_obat) VALUES ('$kode_interaksi','$nama_interaksi','$interaksi','$kode_obat')");
         
 $input = mysqli_query($koneksi, $simpan); 
 // di atas adalah coding untuk mengeksekusi ketika kita klik sumbit dan akan di masukan ke database
