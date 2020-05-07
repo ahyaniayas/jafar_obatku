@@ -20,19 +20,10 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto my-2 my-lg-0">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="../../">Halaman Utama</a>
+            <a class="nav-link js-scroll-trigger" href="../obat/index.php">Daftar Obat</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="../../interaksi.php">Interaksi Antar Obat</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="../../kamus.php">Kamus Obat</a>
-          </li>          
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="../../pustaka.php">Tinjauan Pustaka</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="../../tentang.php">Tentang Kami</a>
+            <a class="nav-link js-scroll-trigger" href="../interaksi/index.php">Daftar Interaksi</a>
           </li>
         </ul>
       </div>

@@ -1,5 +1,4 @@
 <?php include_once "_part/header.php" ?>
-
   <div class="container">
     <div class="content">
       <div class="bg">
@@ -29,5 +28,4 @@
       </div>    
     </div>
   </div>
-
 <?php include_once "_part/footer.php" ?>

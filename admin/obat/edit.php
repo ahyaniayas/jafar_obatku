@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php include_once "../_part/header.php" ?>
 <?php
 include "../../_part/koneksi.php";
@@ -9,11 +8,6 @@ $sql->execute();
 while($row=$sql->fetch())
 {
 ?>
-<html>
-	<head>
-		<title></title>
-	</head>
-<body>
 	<div class="tambah">
 	<center><h2 class="text1">Data Obat</h2></center>
 	<!-- caranya gini -->
@@ -23,7 +17,7 @@ while($row=$sql->fetch())
 	<!--  -->
 	<center><p class="text2"><a href="index.php">Halaman Awal</a></p></center>
 	<h3 class="text3">Ubah Obat</h3>
-		<form action="proses_edit.php" method="POST">
+		<form action="./proses.php" method="POST">
 			<div class="tabel">
 			<input type="hidden" name="kode_obat" value="<?php echo $row['kode_obat']; ?>"/>
 			<div class="form-group">
@@ -67,13 +61,11 @@ while($row=$sql->fetch())
 				<label for="mekanisme_obat">Mekanisme Obat :</label>
 				<input type="text" class="form-control" id="mekanisme_obat" value="<?php echo $row['mekanisme_obat']; ?>" name="mekanisme_obat">
 			</div>					
-				<button class="btn btn-success" type="submit" name="update">Simpan Perubahan</button>
+				<button type="submit" class="btn btn-success" name="proses" value="edit">Simpan Perubahan</button>
 		<br/>
 		<br/>
 		</div>
 	</div>
 	</form>
-	</body>
-</html>
 <?php } ?>
 <?php include_once "../_part/footer.php" ?>

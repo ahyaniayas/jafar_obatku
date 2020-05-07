@@ -11,7 +11,7 @@
       <!-- ====================== BAGIAN ISI ATAS ====================== -->
 
       <!-- ====================== BAGIAN ISI BAWAH ====================== -->
-    	<table id="example" class="table table-striped">
+    	<table id="tabel-kamus" class="table table-striped">
         <thead>
         	<tr>
             <!-- perhatikan -->

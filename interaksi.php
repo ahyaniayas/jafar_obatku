@@ -1,14 +1,32 @@
 <?php include_once "_part/header.php" ?>
-
 	<?php
 		include './_part/koneksi.php';
-	?>
+    $interaksi = '';
+    if(isset($_POST['proses'])){
+
+      $obat1 = $_POST['obat1'];
+      $obat2 = $_POST['obat2'];
+      $obat3 = $_POST['obat3'];
+      $obat4 = $_POST['obat4'];
+      $obat5 = $_POST['obat5'];
+      $obat6 = $_POST['obat6'];
+
+      $kode_obat = $obat1.",".$obat2.",".$obat3.",".$obat4.",".$obat5.",".$obat6;
+    
+      $sqlcek = "select interaksi from interaksi where kode_obat='$kode_obat'";
+      $rowcek = $koneksi->prepare($sqlcek);
+      $rowcek->execute();
+      $isicek = $rowcek->fetch(PDO::FETCH_OBJ);
+
+      $interaksi = $isicek->interaksi;
+    }
+?>
   <div class="container">
     <div class="content">
       <!-- ====================== BAGIAN ISI ATAS ====================== -->
       <h1 class="judul">Cek Interaksi Antar Obat</h1>
 		  <hr class="garis-judul"/>
-      <!-- ====================== BAGIAN ISI ATAS ====================== -->
+      <!-- ====================== END OF BAGIAN ISI ATAS ====================== -->
 
       <!-- ====================== BAGIAN ISI BAWAH ====================== -->
       <?php
@@ -97,7 +115,7 @@
               </select>
             </div>
             <div class="text-right">
-              <button type="submit" class="btn btn-primary">Cek Interaksi</button>
+              <button type="submit" name="proses" value="cek" class="btn btn-primary">Cek Interaksi</button>
             </div>
           </div>
         
@@ -106,7 +124,10 @@
 
       <hr>
       <h3>Hasil dan Penjelasan</h3>
-      <!-- ====================== BAGIAN ISI BAWAH ====================== -->
+      <div class="form-group">
+        <textarea class="form-control"><?= $interaksi; ?></textarea>
+      </div>
+      <!-- ====================== END BAGIAN ISI BAWAH ====================== -->
     </div>
   </div>
 

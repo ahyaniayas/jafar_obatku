@@ -1,16 +1,10 @@
 <!-- 
 pada page atau tambah.php ini berfungsi untuk menampilakn halaman dan fungsi halaman ini adalah untuk meenambahkan data
 -->
-<!DOCTYPE html>
 <?php include_once "../_part/header.php" ?>
 <?php
 include('../../_part/koneksi.php');
 ?>
-<html>
-	<head>
-		<title></title>
-	</head>
-<body>
 	<div class="tambah">
 	<center><h2 class="text1">Data Obat</h2></center>
 	<!-- caranya gini -->
@@ -21,7 +15,7 @@ include('../../_part/koneksi.php');
 	<center><p class="text2"><a href="index.php">Halaman Awal</a></p></center>
 	<h3 class="text3">Tambah Obat</h3>
 		<div class="tabel">
-		<form action="proses_tambah.php" method="POST">
+		<form action="proses.php" method="POST">
 			<div class="form-group">
 				<label for="nama_obat">Nama Obat :</label>
 				<input type="text" class="form-control" id="nama_obat" placeholder="Nama Obat" name="nama_obat">
@@ -63,12 +57,10 @@ include('../../_part/koneksi.php');
 				<label for="mekanisme_obat">Mekanisme Obat :</label>
 				<textarea type="text" class="form-control" id="mekanisme_obat" placeholder="Mekanisme Obat" name="mekanisme_obat"></textarea>
 			</div>					
-				<button class="btn btn-success" type="submit" name="tambah">Simpan Obat</button>
+				<button class="btn btn-success" type="submit" name="proses" value="simpan">Simpan Obat</button>
 			<br/>
 			<br/>
 		</div>
 	</div>
 	</form>
-	</body>
-</html>
 <?php include_once "../_part/footer.php" ?>
