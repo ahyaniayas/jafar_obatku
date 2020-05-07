@@ -40,8 +40,8 @@
         		<td><?php echo $isi->dosis; ?></td>
         		<td><?php echo $isi->pemberian; ?></td>
         		<td><a href="detil.php?kode_obat=<?php echo $isi->kode_obat; ?>">Lihat Detil Obat</a></td>
-        	</tr>
-      	<?php } ?>
+          	</tr>
+        	<?php } ?>
         </tbody>
     	</table>
       <!-- ====================== BAGIAN ISI BAWAH ====================== -->

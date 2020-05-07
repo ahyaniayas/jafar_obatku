@@ -3,36 +3,8 @@ pada page atau tambah.php ini berfungsi untuk menampilakn halaman dan fungsi hal
 -->
 <!DOCTYPE html>
 <?php include_once "../_part/header.php" ?>
-<link rel="stylesheet" href="../../assets/plugins/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../../assets/plugins/bootstrap/css/dataTables.bootstrap4.min.css">
-	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
-	<script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-	<script src="../../assets/plugins/jquery/jquery.dataTables.min.js"></script>
-	<script src="../../assets/plugins/bootstrap/js/dataTables.bootstrap4.min.js"></script>
-	<script>
-	    $(document).ready(function() {
-	      $('#example').DataTable();
-	    } );
-	</script>
 <?php
-include('proses.php');
-$lib = new Library();
-if(isset($_POST['tambah'])){
-		$nama_obat = $_POST['nama_obat'];
-		$gol_obat = $_POST['gol_obat'];
-		$indikasi = $_POST['indikasi'];
-		$dosis = $_POST['dosis'];
-		$pemberian = $_POST['pemberian'];
-		$kontraindikasi = $_POST['kontraindikasi'];
-		$efeksamping = $_POST['efeksamping'];
-		$hamilbusui = $_POST['hamilbusui'];
-		$interaksi_obat = $_POST['interaksi_obat'];
-		$mekanisme_obat = $_POST['mekanisme_obat'];
-    $add_status = $lib->add_data($nama_obat, $gol_obat, $indikasi, $dosis, $pemberian, $kontraindikasi, $efeksamping, $hamilbusui, $interaksi_obat, $mekanisme_obat);
-    if($add_status){
-    header('index.php');
-    }
-}
+include('../../_part/koneksi.php');
 ?>
 <html>
 	<head>
@@ -46,10 +18,10 @@ if(isset($_POST['tambah'])){
 	<!-- localhost/jafar_obatku/admin/obat/ -->
 	<!-- nah selanjutnya kita tinggal panggil filnya. misal proses.php -->
 	<!--  -->
-	<center><p class="text2"><a href="edit.php">Halaman Awal</a></p></center>
+	<center><p class="text2"><a href="index.php">Halaman Awal</a></p></center>
 	<h3 class="text3">Tambah Obat</h3>
 		<div class="tabel">
-		<form action="" method="POST">
+		<form action="proses_tambah.php" method="POST">
 			<div class="form-group">
 				<label for="nama_obat">Nama Obat :</label>
 				<input type="text" class="form-control" id="nama_obat" placeholder="Nama Obat" name="nama_obat">

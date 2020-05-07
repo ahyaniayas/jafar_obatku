@@ -1,18 +1,6 @@
 <?php include_once "../_part/header.php" ?>
 <?php 
-include('proses.php');
-$lib = new Library();
-$data_obat = $lib->show();
-
-if(isset($_GET['hapus_obat']))
-{
-    $kode_obat = $_GET['hapus_obat'];
-    $status_hapus = $lib->delete($kode_obat);
-    if($status_hapus)
-    {
-        header('Location: index.php');
-    }
-}
+include('../../_part/koneksi.php');
 ?>
 <html>
     <head>
@@ -29,8 +17,8 @@ if(isset($_GET['hapus_obat']))
                 <hr/>
                 <table id="tabel-kamus" class="table table-striped" width="60%">
                     <thead>
-                    <tr>    
-                        <th>No</th>
+                    <tr>
+                        <th>No</th>    
                         <th>Nama Obat</th>
                         <th>Golongan Obat</th>
                         <th>Indikasi</th>
@@ -44,28 +32,32 @@ if(isset($_GET['hapus_obat']))
                         <th></th>
                     </tr>
                     </thead>
-                    <tbody><?php 
-                    $no = 1;
-                    foreach($data_obat as $row)
-                    {
-                        echo "<tr>";
-                        echo "<td>".$no."</td>";
-                        echo "<td>".$row['nama_obat']."</td>";
-                        echo "<td>".$row['gol_obat']."</td>";
-                        echo "<td>".$row['indikasi']."</td>";
-                        echo "<td>".$row['dosis']."</td>";
-                        echo "<td>".$row['pemberian']."</td>";
-                        echo "<td>".$row['kontraindikasi']."</td>";
-                        echo "<td>".$row['efeksamping']."</td>";
-                        echo "<td>".$row['hamilbusui']."</td>";
-                        echo "<td>".$row['interaksi_obat']."</td>";
-                        echo "<td>".$row['mekanisme_obat']."</td>";
-                        echo "<td><a class='btn btn-info' href='edit.php?kode_obat=".$row['kode_obat']."'>Ubah</a>
-                        <a class='btn btn-danger' href='index.php?hapus_obat=".$row['kode_obat']."'>Hapus</a></td>";
-                        echo "</tr>";
-                        $no++;
-                    }
-                    ?>
+                    <tbody>
+                    <?php 
+                        $sql = "SELECT * FROM obat";
+                        $row = $koneksi->prepare($sql);
+                        $row->execute();
+                        $hasil = $row->fetchAll(PDO::FETCH_OBJ);
+                        $no = 0;
+                        foreach($hasil as $isi){
+                          $no++;
+                        ?>
+                            <tr>
+                                <td><?php echo $no; ?></td>
+                                <td><?php echo $isi->nama_obat; ?></td>
+                                <td><?php echo $isi->gol_obat; ?></td>
+                                <td><?php echo $isi->indikasi; ?></td>
+                                <td><?php echo $isi->dosis; ?></td>
+                                <td><?php echo $isi->pemberian; ?></td>
+                                <td><?php echo $isi->kontraindikasi; ?></td>
+                                <td><?php echo $isi->efeksamping; ?></td>
+                                <td><?php echo $isi->hamilbusui; ?></td>
+                                <td><?php echo $isi->interaksi_obat; ?></td>
+                                <td><?php echo $isi->mekanisme_obat; ?></td>
+                                <td><a class='btn btn-info' href="edit.php?kode_obat=<?php echo $isi->kode_obat; ?>">Ubah</a>
+                                <a class='btn btn-danger' href="proses_hapus.php?kode_obat=<?php echo $isi->kode_obat; ?>">Hapus</a></td>
+                            </tr>
+                        <?php } ?>
                 </tbody>
                 </table>
             </div>

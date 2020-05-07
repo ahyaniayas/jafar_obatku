@@ -1,12 +1,12 @@
 <?php include_once "_part/header.php" ?>
 
 	<?php
-		  include('./_part/koneksi.php');
-  $sql = $koneksi->prepare("SELECT * FROM obat WHERE kode_obat = :kode_obat ");
-  $sql->bindParam(":kode_obat", $_GET['kode_obat']);
-  $sql->execute();
-  while($data_obat=$sql->fetch())
-  {
+		  include('./admin/obat/proses.php');
+  $lib = new Library();
+  if(isset($_GET['kode_obat'])){
+    $kode_obat = $_GET['kode_obat']; 
+    $data_obat = $lib->get_by_id($kode_obat);
+  }
 	?>
   <div class="container">
     <div class="content">
@@ -67,7 +67,6 @@
         <label class="text2" type="text" id="mekanisme_obat" name="mekanisme_obat">"<?php echo $data_obat['mekanisme_obat']; ?>"</label>
         </div>
       </div>
-      <?php } ?>
       <!-- ====================== BAGIAN ISI BAWAH ====================== -->
     </div>
   </div>
