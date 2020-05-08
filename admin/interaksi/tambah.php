@@ -6,7 +6,7 @@
   <div class="container">
     <div class="content">
       <!-- ====================== BAGIAN ISI ATAS ====================== -->
-      <h1 class="judul">Tambah Transaksi</h1>
+      <h1 class="judul">Tambah Interaksi</h1>
 		  <hr class="garis-judul"/>
       <!-- ====================== BAGIAN ISI ATAS ====================== -->
 
@@ -105,14 +105,16 @@
 	                <?php } ?>
 	              </select>
 	            </div>
-	            <div class="text-right">
-	              <button type="submit" name="proses" value="tambah" class="btn btn-primary">Tambah Interaksi</button>
-	            </div>
 	          </div>
 	        </div>
 	        <div class="form-group">
 	        	<h5 class="col-lg-12">Interaksi</h5>
 	        	<textarea class="form-control" name="interaksi" placeholder="Keterangan Interaksi"></textarea>
+	        </div>
+	        <div class="form-group">
+	            <div class="text-right">
+	              <button type="submit" name="proses" value="tambah" class="btn btn-primary">Tambah Interaksi</button>
+	            </div>
 	        </div>
 	      </form>
       <!-- ====================== BAGIAN ISI BAWAH ====================== -->

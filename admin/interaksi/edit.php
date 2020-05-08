@@ -1,43 +1,135 @@
 <?php include_once "../_part/header.php" ?>
-<?php
-include "../../_part/koneksi.php";
- 
-$sql = $koneksi->prepare("SELECT * FROM interaksi WHERE kode_interaksi = :kode_interaksi ");
-$sql->bindParam(":kode_interaksi", $_GET['kode_interaksi']);
-$sql->execute();
-while($row=$sql->fetch())
-{
-?>
-	<div class="tambah">
-	<center><h2 class="text1">Data Interaksi</h2></center>
-	<!-- caranya gini -->
-	<!-- "./" ini untuk menggunakan folder saat ini berarti ini posisinya di -->
-	<!-- localhost/jafar_obatku/admin/obat/ -->
-	<!-- nah selanjutnya kita tinggal panggil filnya. misal proses.php -->
-	<!--  -->
-	<center><p class="text2"><a href="index.php">Halaman Awal</a></p></center>
-	<h3 class="text3">Ubah Interaksi</h3>
-		<form action="./proses.php" method="POST">
-			<div class="tabel">
-			<input type="hidden" name="kode_interaksi" value="<?php echo $row['kode_interaksi']; ?>"/>
-			<div class="form-group">
-				<label for="nama_interaksi">Nama Interaksi :</label>
-				<input type="text" class="form-control" id="nama_interaksi" value="<?php echo $row['nama_interaksi']; ?>" name="nama_interaksi">
+
+	<?php
+		include '../../_part/koneksi.php';
+
+		$kode_interaksi = $_GET['kode_interaksi'];
+
+		$sqlEdit = "SELECT * FROM interaksi WHERE kode_interaksi='$kode_interaksi'";
+		$rowEdit = $koneksi->prepare($sqlEdit);
+		$rowEdit->execute();
+		$isiEdit = $rowEdit->fetch(PDO::FETCH_OBJ);
+
+		$nama_interaksi = $isiEdit->nama_interaksi;
+		$interaksi = $isiEdit->interaksi;
+        $kode_obat = explode(",", $isiEdit->kode_obat);
+	?>
+  <div class="container">
+    <div class="content">
+      <!-- ====================== BAGIAN ISI ATAS ====================== -->
+      <h1 class="judul">Edit Interaksi</h1>
+		  <hr class="garis-judul"/>
+      <!-- ====================== BAGIAN ISI ATAS ====================== -->
+
+      <!-- ====================== BAGIAN ISI BAWAH ====================== -->
+		<div class="row">
+			<div class="col-lg-12 text-right">
+				<a href="./index.php" class="btn btn-primary">Kembali</a>
 			</div>
-			<div class="form-group">
-				<label for="interaksi">Interaksi :</label>
-				<input type="text" class="form-control" id="interaksi" value="<?php echo $row['interaksi']; ?>" name="interaksi">
-			</div>
-			<div class="form-group">
-				<label for="indikasi">Kode Obat :</label>
-				<input type="text" class="form-control" id="kode_obat" value="<?php echo $row['kode_obat']; ?>" name="kode_obat">
-			</div>									
-				<button type="submit" class="btn btn-success" name="proses" value="edit">Simpan Perubahan</button>
-		<br/>
-		<br/>
 		</div>
-	</div>
-	</form>
-</div>
-<?php } ?>
+		<?php
+	        $sql = "SELECT * FROM obat ORDER BY nama_obat";
+	        $row = $koneksi->prepare($sql);
+	        $row->execute();
+	        $hasil = $row->fetchAll(PDO::FETCH_OBJ);
+     	?>
+	      <form action="./proses.php" method="POST">
+			<div class="form-group">
+	        	<h5 class="col-lg-12">Nama Interaksi</h5>
+	        	<input type="text" class="form-control" name="nama_interaksi" value="<?= $nama_interaksi ?>" placeholder="Nama Interaksi">
+	        </div>
+	        <div class="row">
+	          <div class="col-lg-6">
+
+	            <div class="input-group mb-3">
+	              <div class="input-group-prepend">
+	                <span class="input-group-text">Obat 1</span>
+	              </div>
+	              <select class="form-control" name="obat1">
+	                <option value="">--- Pilih Obat 1 ---</option>
+	                <?php foreach($hasil as $isi) { ?>
+	                <option value="<?= $isi->kode_obat ?>" <?= $kode_obat[0]==$isi->kode_obat? "selected": "" ?>><?= $isi->nama_obat ?></option>
+	                <?php } ?>
+	              </select>
+	            </div>
+
+	            <div class="input-group mb-3">
+	              <div class="input-group-prepend">
+	                <span class="input-group-text">Obat 2</span>
+	              </div>
+	              <select class="form-control" name="obat2">
+	                <option value="">--- Pilih Obat 2 ---</option>
+	                <?php foreach($hasil as $isi){ ?>
+	                <option value="<?= $isi->kode_obat ?>" <?= $kode_obat[1]==$isi->kode_obat? "selected": "" ?>><?= $isi->nama_obat ?></option>
+	                <?php } ?>
+	              </select>
+	            </div>
+
+	            <div class="input-group mb-3">
+	              <div class="input-group-prepend">
+	                <span class="input-group-text">Obat 3</span>
+	              </div>
+	              <select class="form-control" name="obat3">
+	                <option value="">--- Pilih Obat 3 ---</option>
+	                <?php foreach($hasil as $isi){ ?>
+	                <option value="<?= $isi->kode_obat ?>" <?= $kode_obat[2]==$isi->kode_obat? "selected": "" ?>><?= $isi->nama_obat ?></option>
+	                <?php } ?>
+	              </select>
+	            </div>
+
+	          </div>
+
+	          <div class="col-lg-6">
+
+	            <div class="input-group mb-3">
+	              <div class="input-group-prepend">
+	                <span class="input-group-text">Obat 4</span>
+	              </div>
+	              <select class="form-control" name="obat4">
+	                <option value="">--- Pilih Obat 4 ---</option>
+	                <?php foreach($hasil as $isi){ ?>
+	                <option value="<?= $isi->kode_obat ?>" <?= $kode_obat[3]==$isi->kode_obat? "selected": "" ?>><?= $isi->nama_obat ?></option>
+	                <?php } ?>
+	              </select>
+	            </div>
+
+	            <div class="input-group mb-3">
+	              <div class="input-group-prepend">
+	                <span class="input-group-text">Obat 5</span>
+	              </div>
+	              <select class="form-control" name="obat5">
+	                <option value="">--- Pilih Obat 5 ---</option>
+	                <?php foreach($hasil as $isi){ ?>
+	                <option value="<?= $isi->kode_obat ?>" <?= $kode_obat[4]==$isi->kode_obat? "selected": "" ?>><?= $isi->nama_obat ?></option>
+	                <?php } ?>
+	              </select>
+	            </div>
+
+	            <div class="input-group mb-3">
+	              <div class="input-group-prepend">
+	                <span class="input-group-text">Obat 6</span>
+	              </div>
+	              <select class="form-control" name="obat6">
+	                <option value="">--- Pilih Obat 6 ---</option>
+	                <?php foreach($hasil as $isi){ ?>
+	                <option value="<?= $isi->kode_obat ?>" <?= $kode_obat[5]==$isi->kode_obat? "selected": "" ?>><?= $isi->nama_obat ?></option>
+	                <?php } ?>
+	              </select>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="form-group">
+	        	<h5 class="col-lg-12">Interaksi</h5>
+	        	<textarea class="form-control" name="interaksi" placeholder="Keterangan Interaksi"><?= $interaksi ?></textarea>
+	        </div>
+	        <div class="form-group">
+	        	<div class="text-right">
+	        		<input type="hidden" name="kode_interaksi" value="<?= $kode_interaksi ?>">
+	        		<button type="submit" name="proses" value="edit" class="btn btn-primary">Edit Interaksi</button>
+	        	</div>
+	        </div>
+	      </form>
+      <!-- ====================== BAGIAN ISI BAWAH ====================== -->
+    </div>
+  </div>
 <?php include_once "../_part/footer.php" ?>

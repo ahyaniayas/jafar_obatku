@@ -17,7 +17,7 @@
               <th>No</th>    
               <th>Nama Interaksi</th>
               <th>Interaksi</th>
-              <th>Kode Obat</th>
+              <th>Obat</th>
               <th></th>
             </tr>
           </thead>
@@ -30,12 +30,29 @@
               $no = 0;
               foreach($hasil as $isi){
                 $no++;
+
+                $kode_obat = explode(",", $isi->kode_obat);
+                $nama_obat = "";
+                for($i=0; $i<count($kode_obat); $i++){
+                  $kode = $kode_obat[$i];
+                  $sqlObat = "SELECT nama_obat FROM obat WHERE kode_obat='$kode'";
+                  $rowObat = $koneksi->prepare($sqlObat);
+                  $rowObat->execute();
+                  $isiObat = $rowObat->fetch(PDO::FETCH_OBJ);
+
+                  if(!empty($isiObat->nama_obat)){
+                    $nama_obat .= ($i+1).". ".$isiObat->nama_obat."<br>";
+                  }else{
+                    $nama_obat .= ($i+1).". <br>";
+
+                  }
+                }
               ?>
                   <tr>
                       <td><?php echo $no; ?></td>
                       <td><?php echo $isi->nama_interaksi; ?></td>
                       <td><?php echo $isi->interaksi; ?></td>
-                      <td><?php echo $isi->kode_obat; ?></td>
+                      <td><?php echo $nama_obat; ?></td>
                       <td><a class='btn btn-info' href="edit.php?kode_interaksi=<?php echo $isi->kode_interaksi; ?>">Ubah</a>
                       <a class='btn btn-danger' href="proses.php?kode_interaksi=<?php echo $isi->kode_interaksi; ?>">Hapus</a></td>
                   </tr>
