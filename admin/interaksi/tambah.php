@@ -41,7 +41,9 @@
 	                <?php } ?>
 	              </select>
 	            </div>
+            </div>
 
+	          <div class="col-lg-6">
 	            <div class="input-group mb-3">
 	              <div class="input-group-prepend">
 	                <span class="input-group-text">Obat 2</span>

@@ -40,13 +40,9 @@
                   $rowObat->execute();
                   $isiObat = $rowObat->fetch(PDO::FETCH_OBJ);
 
-                  if(!empty($isiObat->nama_obat)){
-                    $nama_obat .= ($i+1).". ".$isiObat->nama_obat."<br>";
-                  }else{
-                    $nama_obat .= ($i+1).". <br>";
-
-                  }
+                  $nama_obat .= $isiObat->nama_obat.", ";
                 }
+                $nama_obat = rtrim($nama_obat, ", ");
               ?>
                   <tr>
                       <td><?php echo $no; ?></td>
