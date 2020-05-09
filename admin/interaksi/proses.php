@@ -9,11 +9,7 @@
 
             $obat1 = $_POST['obat1'];
             $obat2 = $_POST['obat2'];
-            $obat3 = $_POST['obat3'];
-            $obat4 = $_POST['obat4'];
-            $obat5 = $_POST['obat5'];
-            $obat6 = $_POST['obat6'];
-            $kode_obat = $obat1.",".$obat2.",".$obat3.",".$obat4.",".$obat5.",".$obat6;
+            $kode_obat = $obat1.",".$obat2;
 
             $sql = "INSERT INTO interaksi 
                     (nama_interaksi, interaksi, kode_obat)
@@ -31,11 +27,7 @@
 
             $obat1 = $_POST['obat1'];
             $obat2 = $_POST['obat2'];
-            $obat3 = $_POST['obat3'];
-            $obat4 = $_POST['obat4'];
-            $obat5 = $_POST['obat5'];
-            $obat6 = $_POST['obat6'];
-            $kode_obat = $obat1.",".$obat2.",".$obat3.",".$obat4.",".$obat5.",".$obat6;
+            $kode_obat = $obat1.",".$obat2;
 
             $sql = "UPDATE interaksi SET 
                 nama_interaksi = '$nama_interaksi',

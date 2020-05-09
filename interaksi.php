@@ -19,6 +19,10 @@
       $isicek = $rowcek->fetch(PDO::FETCH_OBJ);
 
       $interaksi = $isicek->interaksi;
+    }elseif (isset($_GET['proses'])) {
+      $sqlhasil = !empty($interaksi==""); echo "Tidak Ada Interaksi Antar Obat";
+      $rowhasil = $koneksi->prepare($sqlhasil);
+      $rowhasil->execute();
     }
 ?>
   <div class="container">
@@ -125,7 +129,7 @@
       <hr>
       <h3>Hasil dan Penjelasan</h3>
       <div class="form-group">
-        <textarea class="form-control"><?= $interaksi; ?></textarea>
+        <textarea class="form-control" name="hasilinteraksi"><?= $interaksi; ?></textarea>
       </div>
       <!-- ====================== END BAGIAN ISI BAWAH ====================== -->
     </div>

@@ -54,57 +54,6 @@
 	              </select>
 	            </div>
 
-	            <div class="input-group mb-3">
-	              <div class="input-group-prepend">
-	                <span class="input-group-text">Obat 3</span>
-	              </div>
-	              <select class="form-control" name="obat3">
-	                <option value="">--- Pilih Obat 3 ---</option>
-	                <?php foreach($hasil as $isi){ ?>
-	                <option value="<?= $isi->kode_obat ?>"><?= $isi->nama_obat ?></option>
-	                <?php } ?>
-	              </select>
-	            </div>
-
-	          </div>
-
-	          <div class="col-lg-6">
-
-	            <div class="input-group mb-3">
-	              <div class="input-group-prepend">
-	                <span class="input-group-text">Obat 4</span>
-	              </div>
-	              <select class="form-control" name="obat4">
-	                <option value="">--- Pilih Obat 4 ---</option>
-	                <?php foreach($hasil as $isi){ ?>
-	                <option value="<?= $isi->kode_obat ?>"><?= $isi->nama_obat ?></option>
-	                <?php } ?>
-	              </select>
-	            </div>
-
-	            <div class="input-group mb-3">
-	              <div class="input-group-prepend">
-	                <span class="input-group-text">Obat 5</span>
-	              </div>
-	              <select class="form-control" name="obat5">
-	                <option value="">--- Pilih Obat 5 ---</option>
-	                <?php foreach($hasil as $isi){ ?>
-	                <option value="<?= $isi->kode_obat ?>"><?= $isi->nama_obat ?></option>
-	                <?php } ?>
-	              </select>
-	            </div>
-
-	            <div class="input-group mb-3">
-	              <div class="input-group-prepend">
-	                <span class="input-group-text">Obat 6</span>
-	              </div>
-	              <select class="form-control" name="obat6">
-	                <option value="">--- Pilih Obat 6 ---</option>
-	                <?php foreach($hasil as $isi){ ?>
-	                <option value="<?= $isi->kode_obat ?>"><?= $isi->nama_obat ?></option>
-	                <?php } ?>
-	              </select>
-	            </div>
 	          </div>
 	        </div>
 	        <div class="form-group">
