@@ -29,7 +29,7 @@
             <a class="nav-link js-scroll-trigger" href="./kamus.php">Kamus Obat</a>
           </li>          
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="./pustaka.php">Tinjauan Pustaka</a>
+            <a class="nav-link js-scroll-trigger" href="./glosarium.php">Glosarium</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="./tentang.php">Tentang Kami</a>

@@ -2,9 +2,9 @@
 	<?php
 	include('./_part/koneksi.php');
 
-  $kode_obat = $_GET['kode_obat']; /*tangkapan ini lebih baik disimpen ke variabel*/
-  $sql = "SELECT * FROM obat WHERE kode_obat = '$kode_obat'"; /*Script sql lebih baik disimpan dalam 1 variabel sendiri*/
-  $row = $koneksi->prepare($sql); /*nah disini baru masukkan variable sql yang berisi script sqlnya*/ 
+  $kode_obat = $_GET['kode_obat'];
+  $sql = "SELECT * FROM obat WHERE kode_obat = '$kode_obat'";
+  $row = $koneksi->prepare($sql); 
   $row->execute();
 
   $isi = $row->fetch(PDO::FETCH_OBJ);
@@ -12,8 +12,8 @@
   <div class="container">
     <div class="content">
       <!-- ====================== BAGIAN ISI ATAS ====================== -->
-      <h1 class="judul">Kamus Obat</h1>
-		  <hr class="garis-judul"/>
+      <a href="./kamus.php"><h1 style="color: black" class="judul">Kamus Obat</h1></a>
+      <hr class="garis-judul"/>
       <!-- ====================== BAGIAN ISI ATAS ====================== -->
 
       <!-- ====================== BAGIAN ISI BAWAH ====================== -->

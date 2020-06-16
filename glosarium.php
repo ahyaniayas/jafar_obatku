@@ -6,7 +6,7 @@
   <div class="container">
     <div class="content">
       <!-- ====================== BAGIAN ISI ATAS ====================== -->
-      <h1 class="judul">Tinjauan Pustaka</h1>
+      <h1 class="judul">Glosarium</h1>
 		  <hr class="garis-judul"/>
       <!-- ====================== BAGIAN ISI ATAS ====================== -->
 
@@ -14,12 +14,12 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="link">
-            <a href="#indikasi" style="font-weight: bold;">Indikasi</a><br/>
-            <a href="#hamil" style="font-weight: bold;">Kategori Kehamilan dan Menyusui</a><br/>
             <a href="#dosis" style="font-weight: bold;">Dosis</a><br/>
-            <a href="#kontra" style="font-weight: bold;">Kontraindikasi</a><br/>
             <a href="#efeksamping" style="font-weight: bold;">Efek Samping</a><br/>
+            <a href="#indikasi" style="font-weight: bold;">Indikasi</a><br/>
             <a href="#interaksi" style="font-weight: bold;">Interaksi Obat</a><br/>
+            <a href="#hamil" style="font-weight: bold;">Kategori Kehamilan dan Menyusui</a><br/>
+            <a href="#kontra" style="font-weight: bold;">Kontraindikasi</a><br/>
             <a href="#mekanisme" style="font-weight: bold;">Mekanisme Obat</a><br/>
           </div>
         </div>
@@ -32,12 +32,36 @@
           <h3><u>Penjelasan</u></h3>
         </div>
       </div>
+      <div class="row mt-5" id="dosis">
+        <div class="col-lg-3">
+          <span style="font-weight: bold;">Dosis</span>
+        </div>
+        <div class="col-lg-9">
+          <span>Dosis merupakan kadar dari sesuatu (kimiawi, fisik, biologis) yang dapat mempengaruhi suatu organisme secara biologis; makin besar kadarnya, makin besar pula dosisnya. Di bidang kedokteran, istilah ini biasanya diperuntukkan bagi kadar obat atau agen lain yang diberikan untuk tujuan terapi.</span>
+        </div>
+      </div>
+      <div class="row mt-5" id="efeksamping">
+        <div class="col-lg-3">
+          <span style="font-weight: bold;">Efek Samping</span>
+        </div>
+        <div class="col-lg-9">
+          <span>suatu dampak atau pengaruh yang merugikan dan tidak diinginkan, yang timbul sebagai hasil dari suatu pengobatan atau intervensi lain seperti pembedahan. Suatu pengaruh atau dampak negatif disebut sebagai efek samping ketika hal itu timbul sebagai efek sekunder dari efek terapi utamanya. Jika efek itu muncul sebagai hasil dari dosis atau prosedur yang tidak tepat maka disebut sebagai kesalahan medis. Efek samping terkadang mengacu kepada Iatrogenik karena hal itu ditimbulkan oleh dokter/pengobatan</span>
+        </div>
+      </div>
       <div class="row mt-5" id="indikasi">
         <div class="col-lg-3">
           <span style="font-weight: bold;">Indikasi</span>
         </div>
         <div class="col-lg-9">
           <span>Rasa sakit, rasa nyeri, gejala sakit dan / atau penyakit yang dapat diatasi menggunakan terapi obat.Indikasi adalah kegunaan suatu obat pada kondisi penyakit tertentu.</span>
+        </div>
+      </div>
+      <div class="row mt-5" id="interaksi">
+        <div class="col-lg-3">
+          <span style="font-weight: bold;">Interaksi Obat</span>
+        </div>
+        <div class="col-lg-9">
+          <span>situasi di mana suatu zat memengaruhi aktivitas obat, yaitu meningkatkan atau menurunkan efeknya, atau menghasilkan efek baru yang tidak diinginkan atau direncanakan. Interaksi dapat terjadi antar-obat atau antara obat dengan makanan serta obat-obatan herbal</span>
         </div>
       </div>
       <div class="row mt-5" id="hamil">
@@ -60,36 +84,12 @@
             <br/>Kategori N: Tidak ada penelitian yang memadai mengenai risiko penggunaan obat ini pada ibu hamil atau menyusui. Selalu konsultasikan kepada dokter Anda untuk mempertimbangkan potensi manfaat dan risiko sebelum menggunakan obat ini.</span>
         </div>
       </div>
-      <div class="row mt-5" id="dosis">
-        <div class="col-lg-3">
-          <span style="font-weight: bold;">Dosis</span>
-        </div>
-        <div class="col-lg-9">
-          <span>Dosis merupakan kadar dari sesuatu (kimiawi, fisik, biologis) yang dapat mempengaruhi suatu organisme secara biologis; makin besar kadarnya, makin besar pula dosisnya. Di bidang kedokteran, istilah ini biasanya diperuntukkan bagi kadar obat atau agen lain yang diberikan untuk tujuan terapi.</span>
-        </div>
-      </div>
       <div class="row mt-5" id="kontra">
         <div class="col-lg-3">
           <span style="font-weight: bold;">Kontraindikasi</span>
         </div>
         <div class="col-lg-9">
           <span>suatu kondisi atau faktor yang berfungsi sebagai alasan untuk mencegah tindakan medis tertentu karena bahaya yang akan didapatkan pasien. Kontraindikasi adalah kebalikan dari indikasi, yang merupakan alasan untuk menggunakan pengobatan tertentu.</span>
-        </div>
-      </div>
-      <div class="row mt-5" id="efeksamping">
-        <div class="col-lg-3">
-          <span style="font-weight: bold;">Efek Samping</span>
-        </div>
-        <div class="col-lg-9">
-          <span>suatu dampak atau pengaruh yang merugikan dan tidak diinginkan, yang timbul sebagai hasil dari suatu pengobatan atau intervensi lain seperti pembedahan. Suatu pengaruh atau dampak negatif disebut sebagai efek samping ketika hal itu timbul sebagai efek sekunder dari efek terapi utamanya. Jika efek itu muncul sebagai hasil dari dosis atau prosedur yang tidak tepat maka disebut sebagai kesalahan medis. Efek samping terkadang mengacu kepada Iatrogenik karena hal itu ditimbulkan oleh dokter/pengobatan</span>
-        </div>
-      </div>
-      <div class="row mt-5" id="interaksi">
-        <div class="col-lg-3">
-          <span style="font-weight: bold;">Interaksi Obat</span>
-        </div>
-        <div class="col-lg-9">
-          <span>situasi di mana suatu zat memengaruhi aktivitas obat, yaitu meningkatkan atau menurunkan efeknya, atau menghasilkan efek baru yang tidak diinginkan atau direncanakan. Interaksi dapat terjadi antar-obat atau antara obat dengan makanan serta obat-obatan herbal</span>
         </div>
       </div>
       <div class="row mt-5" id="mekanisme">

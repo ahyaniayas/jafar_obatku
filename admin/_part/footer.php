@@ -30,6 +30,18 @@
 
       });
     } );
+       $(document).ready(function() {
+      $('#tabel-interaksi').DataTable({
+        // disini untuk memanipulasi datatablenya termasuk settingan untuk pencarian
+        // nama obatkan adanya di kolom ke 1. maka selain kolom ke 1 dimatikan fungsi pencariannya
+        "columnDefs": [
+          // ini fungsi untuk mematikan pencarian di kolom selain kolom 1
+          { "targets": [0,2,4], "searchable": false }
+          // coba
+        ]
+
+      });
+    } );
   </script>
   <!-- JAVASCRIPT -->
 </body>

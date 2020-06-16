@@ -50,7 +50,7 @@
                       <td><?php echo $isi->hamilbusui; ?></td>
                       <td><?php echo $isi->interaksi_obat; ?></td>
                       <td><?php echo $isi->mekanisme_obat; ?></td>
-                      <td><a class='btn btn-info' href="edit.php?kode_obat=<?php echo $isi->kode_obat; ?>">Ubah</a>
+                      <td><a class='btn btn-info' href="edit.php?kode_obat=<?php echo $isi->kode_obat; ?>">Ubah</a><p><br/></p>
                       <a class='btn btn-danger' href="proses.php?kode_obat=<?php echo $isi->kode_obat; ?>">Hapus</a></td>
                   </tr>
               <?php } ?>

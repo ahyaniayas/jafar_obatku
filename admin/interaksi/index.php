@@ -11,7 +11,7 @@
 
       <!-- ====================== BAGIAN ISI BAWAH ====================== -->
       <a href="tambah.php" class="btn btn-success mb-5">Tambah Interaksi</a>
-      <table id="tabel-kamus" class="table table-striped" width="60%">
+      <table id="tabel-interaksi" class="table table-striped" width="100%">
           <thead>
             <tr>
               <th>No</th>    
@@ -49,7 +49,7 @@
                       <td><?php echo $isi->nama_interaksi; ?></td>
                       <td><?php echo $isi->interaksi; ?></td>
                       <td><?php echo $nama_obat; ?></td>
-                      <td><a class='btn btn-info' href="edit.php?kode_interaksi=<?php echo $isi->kode_interaksi; ?>">Ubah</a>
+                      <td><a class='btn btn-info' href="edit.php?kode_interaksi=<?php echo $isi->kode_interaksi; ?>">Ubah</a><p><br/></p>
                       <a class='btn btn-danger' href="proses.php?kode_interaksi=<?php echo $isi->kode_interaksi; ?>">Hapus</a></td>
                   </tr>
               <?php } ?>

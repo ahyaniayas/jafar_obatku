@@ -20,7 +20,7 @@
             <a href="./kamus.php"><img src="assets/img/kamus1.png" /></a>
           </div>
           <div class="col-lg-4">
-            <a href="./pustaka.php"><img src="assets/img/pustaka1.png" /></a>
+            <a href="./glosarium.php"><img src="assets/img/glosariumx.png" /></a>
           </div>
         </div>
        </div> 

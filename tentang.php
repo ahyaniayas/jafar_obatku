@@ -26,16 +26,16 @@
         <div class="col-lg-4">
           <h5 style="font-weight: bold;">Ikuti Kami</h5>
           <div class="row">
-            <div class="kotak-follow-us kotak-follow-us3">
-              <a href="http://wa.me/6287808380671" target="_blank"><img src="assets/img/icon/wa.png" /></a>
+            <div class="kotak-follow-us">
+              <a href="http://wa.me/6287808380671" target="_blank"><img src="assets/img/icon/wa1.png" /></a>
             </div>
-            <div class="kotak-follow-us kotak-follow-us2">
-              <a href="https://instagram.com/jafarash95" target="_blank"><img src="assets/img/icon/ig.png" /></a>
+            <div class="kotak-follow-us">
+              <a href="https://instagram.com/jafarash95" target="_blank"><img src="assets/img/icon/ig2.png" /></a>
             </div>
-            <div class="kotak-follow-us kotak-follow-us1">
+            <div class="kotak-follow-us">
               <a href="http://facebook.com/kyuzuryu" target="_blank"><img src="assets/img/icon/fb.png" /></a>
             </div>
-            <div class="kotak-follow-us kotak-follow-us4">
+            <div class="kotak-follow-us">
               <a href="https://stmikmj.ac.id/" target="_blank"><img src="assets/img/icon/stmik.png" /></a>
             </div>
           </div>

@@ -1,7 +1,7 @@
 <?php include_once "_part/header.php" ?>
 	<?php
 		include './_part/koneksi.php';
-    $obat = array("", "", "", "", "", "");
+    $obat = array("", "", "", "", "", "", "", "", "", "");
     if(isset($_POST['proses'])){
       $obat = array();
       $obat[] = $_POST['obat1'];
@@ -10,6 +10,10 @@
       $obat[] = $_POST['obat4'];
       $obat[] = $_POST['obat5'];
       $obat[] = $_POST['obat6'];
+      $obat[] = $_POST['obat7'];
+      $obat[] = $_POST['obat8'];
+      $obat[] = $_POST['obat9'];
+      $obat[] = $_POST['obat10'];
 
       $whereCek = "";
       for($i=0; $i<count($obat); $i++){
@@ -84,10 +88,6 @@
               </select>
             </div>
 
-          </div>
-
-          <div class="col-lg-6">
-
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text">Obat 4</span>
@@ -111,7 +111,9 @@
                 <?php } ?>
               </select>
             </div>
+          </div>
 
+          <div class="col-lg-6">
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text">Obat 6</span>
@@ -123,6 +125,55 @@
                 <?php } ?>
               </select>
             </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Obat 7</span>
+              </div>
+              <select class="form-control" name="obat7">
+                <option value="">--- Pilih Obat 7 ---</option>
+                <?php foreach($hasil as $isi){ ?>
+                <option value="<?= $isi->kode_obat ?>" <?= $obat[6]==$isi->kode_obat? "selected": "" ?>><?= $isi->nama_obat ?></option>
+                <?php } ?>
+              </select>
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Obat 8</span>
+              </div>
+              <select class="form-control" name="obat8">
+                <option value="">--- Pilih Obat 8 ---</option>
+                <?php foreach($hasil as $isi){ ?>
+                <option value="<?= $isi->kode_obat ?>" <?= $obat[7]==$isi->kode_obat? "selected": "" ?>><?= $isi->nama_obat ?></option>
+                <?php } ?>
+              </select>
+            </div>
+  
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Obat 9</span>
+              </div>
+              <select class="form-control" name="obat9">
+                <option value="">--- Pilih Obat 9 ---</option>
+                <?php foreach($hasil as $isi){ ?>
+                <option value="<?= $isi->kode_obat ?>" <?= $obat[8]==$isi->kode_obat? "selected": "" ?>><?= $isi->nama_obat ?></option>
+                <?php } ?>
+              </select>
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Obat 10</span>
+              </div>
+              <select class="form-control" name="obat10">
+                <option value="">--- Pilih Obat 10 ---</option>
+                <?php foreach($hasil as $isi){ ?>
+                <option value="<?= $isi->kode_obat ?>" <?= $obat[9]==$isi->kode_obat? "selected": "" ?>><?= $isi->nama_obat ?></option>
+                <?php } ?>
+              </select>
+            </div>
+
             <div class="text-right">
               <button type="submit" name="proses" value="cek" class="btn btn-primary">Cek Interaksi</button>
             </div>
@@ -137,9 +188,8 @@
         <thead>
           <tr>
             <th>No</th>
-            <th>Nama Interaksi</th>
-            <th>Interaksi</th>
             <th>Obat</th>
+            <th>Interaksi</th>
           </tr>
         </thead>
         <tbody>
@@ -164,9 +214,8 @@
           ?>
           <tr>
             <td><?= $no ?></td>
-            <td><?= $isiCek->nama_interaksi ?></td>
-            <td><?= $isiCek->interaksi ?></td>
             <td><?= $nama_obat ?></td>
+            <td><?= $isiCek->interaksi ?></td>
           </tr>
           <?php } ?>
           <?php }else{ ?>
