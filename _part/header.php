@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Sistem Pakar Interaksi Antar Obat</title>
+  <link rel="icon" type="image/png" href="./assets/img/logo_obatku.png">
   <!-- CSS -->
   <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/plugins/bootstrap/css/dataTables.bootstrap4.min.css">
